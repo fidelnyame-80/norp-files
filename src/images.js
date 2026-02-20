@@ -1,196 +1,171 @@
-﻿// images.js
-// This file contains all your images and videos data
-// Simply add new items to this array and they will automatically appear in the gallery
-
-/**
- * HOW TO ADD NEW IMAGES/VIDEOS:
- *
- * 1. Place your image/video files in the 'public' folder (e.g., public/images/toy1.jpg)
- * 2. Add a new object to the 'images' array below with this structure:
- *
- * {
- *   id: 1,                    // Unique number for each item
- *   image: '/images/toy1.jpg', // Path to your image (relative to public folder)
- *   title: 'Red Car',          // Title of the item
- *   rating: 4.5,               // Rating out of 5
- *   views: 1840,               // View count as a number
- *   category: 'All',           // Category: 'All', 'Asian', 'Black', 'Latina', 'White', or 'Mixed'
- *   tags: ['featured']         // Optional: array of tags for filtering
- * }
- *
- * 3. Save this file - the gallery will automatically update!
- */
-
-export const images = [
-  {
-    id: 1,
-    image: '/images/red-car.jpg',
-    title: 'Red Car',
-    rating: 4.5,
-    views: 12440,
-    category: 'All',
-    tags: ['featured', 'popular']
-  },
-  {
-    id: 2,
-    image: '/images/yellow-duck.jpg',
-    title: 'Yellow Duck',
-    rating: 4.5,
-    views: 9860,
-    category: 'All',
-    tags: ['popular']
-  },
-  {
-    id: 3,
-    image: '/images/building-blocks.jpg',
-    title: 'Building Blocks',
-    rating: 4.8,
-    views: 11320,
-    category: 'All',
-    tags: ['featured']
-  },
-  {
-    id: 4,
-    image: '/images/green-dinosaur.jpg',
-    title: 'Green Dinosaur',
-    rating: 4.5,
-    views: 2740,
-    category: 'Asian',
-    tags: []
-  },
-  {
-    id: 5,
-    image: '/images/purple-ball.jpg',
-    title: 'Purple Ball',
-    rating: 4.8,
-    views: 4210,
-    category: 'Black',
-    tags: []
-  },
-  {
-    id: 6,
-    image: '/images/colorful-house.jpg',
-    title: 'Colorful House',
-    rating: 4.8,
-    views: 3580,
-    category: 'Latina',
-    tags: []
-  },
-  {
-    id: 7,
-    image: '/images/colorful-blocks.jpg',
-    title: 'Colorful Blocks',
-    rating: 4.5,
-    views: 1930,
-    category: 'White',
-    tags: []
-  },
-  {
-    id: 8,
-    image: '/images/purple-house.jpg',
-    title: 'Purple House',
-    rating: 4.5,
-    views: 2410,
-    category: 'Mixed',
-    tags: []
-  },
-  {
-    id: 9,
-    image: '/images/shape-sorter.jpg',
-    title: 'Shape Sorter',
-    rating: 4.8,
-    views: 5370,
-    category: 'All',
-    tags: []
-  },
-  {
-    id: 10,
-    image: '/images/colorful-toy-car.jpg',
-    title: 'Colorful Toy Car',
-    rating: 4.5,
-    views: 3090,
-    category: 'Asian',
-    tags: []
-  },
-  {
-    id: 11,
-    image: '/images/red-toy-car.jpg',
-    title: 'Red Toy Car',
-    rating: 4.8,
-    views: 4650,
-    category: 'Black',
-    tags: []
-  },
-  {
-    id: 12,
-    image: '/images/spinning-top.jpg',
-    title: 'Spinning Top',
-    rating: 4.8,
-    views: 6220,
-    category: 'Latina',
-    tags: []
-  },
-  {
-    id: 13,
-    image: '/images/yellow-toy-car.jpg',
-    title: 'Yellow Toy Car',
-    rating: 4.5,
-    views: 1840,
-    category: 'White',
-    tags: []
-  },
-  {
-    id: 14,
-    image: '/images/pink-ball.jpg',
-    title: 'Pink Ball',
-    rating: 4.8,
-    views: 3980,
-    category: 'Mixed',
-    tags: []
-  },
-  {
-    id: 15,
-    image: '/images/spinning-top-2.jpg',
-    title: 'Colorful Spinning Top',
-    rating: 4.8,
-    views: 7120,
-    category: 'All',
-    tags: []
-  },
-  {
-    id: 16,
-    image: '/images/toy-car-colorful.jpg',
-    title: 'Multi-Color Car',
-    rating: 4.8,
-    views: 2870,
-    category: 'Asian',
-    tags: []
-  },
-  {
-    id: 17,
-    image: '/images/purple-ball-2.jpg',
-    title: 'Purple Ball',
-    rating: 4.8,
-    views: 4520,
-    category: 'Black',
-    tags: []
-  },
-  {
-    id: 18,
-    image: '/images/blue-blocks.jpg',
-    title: 'Blue Building Blocks',
-    rating: 4.8,
-    views: 3350,
-    category: 'Latina',
-    tags: []
-  }
+const IMAGE_FILES = [
+  'asian-anime-girl-boobs.png',
+  'asian-beauty.png',
+  'asian-boobs.png',
+  'asian-boobs-oiled.png',
+  'asian-boobs-sun-kissed.png',
+  'asian-girl-boobs-oiled.png',
+  'asian-girlfriend-boobs.png',
+  'asian-oiled-up-boobs.png',
+  'attractive-latina-girl.png',
+  'attractive-mixed-race-girl-boobs.png',
+  'beautiful-mixed-race-girl.png',
+  'big-boobed-asian.png',
+  'curvy-latina-boobs.png',
+  'curvy-latina-naturals.png',
+  'cute-asian-boobs.png',
+  'cute-latina-boobs.png',
+  'cute-latina-woman-boobs.png',
+  'cute-white-girl-tits.png',
+  'ebony-boobs-oiled-up.png',
+  'ebony-oiled.png',
+  'ebony-oiled-boobs.png',
+  'ebony-perky-boobs.png',
+  'ebony-perky-tits.png',
+  'elegant-natural-latina-tits.png',
+  'gorgeous-asian-tits.png',
+  'gorgeous-ebony-boobs.png',
+  'gorgeous-latina.png',
+  'gorgeous-latina-boobs.png',
+  'gorgeous-mixed-race-girl.png',
+  'hot-asian-girl-tits.png',
+  'hot-asian-girl-titties.png',
+  'hot-body-asian.png',
+  'hot-caucasian-white-girl.png',
+  'hot-latina.png',
+  'hot-latina-girl.png',
+  'hot-mixed-race-girl.png',
+  'hot-white-girl-nude.png',
+  'hot-white-girl-titties.png',
+  'huge-boobs-caucasian-white-girl.png',
+  'huge-boobs-latina.png',
+  'huge-saggy-tit-latina.png',
+  'irrestible-mixed-race-girl-boobs.png',
+  'large-boob-asian-girl.png',
+  'latina-boobs-watered-up.png',
+  'lightskinned-ebony-tits.png',
+  'light-skinned-oiled.png',
+  'lovely-tits-mixed-race-girl.png',
+  'mixed-race-beauty-boobs.png',
+  'mixed-race-beauty-queen-boobs.png',
+  'mixed-race-ebony-girl-nude.png',
+  'mixed-race-ebony-naturals.png',
+  'mixed-race-girl.png',
+  'mixed-race-girl-green-eyes.png',
+  'mixed-race-girl-green-eyes-nude.png',
+  'mixed-race-girl-nude.png',
+  'mixed-race-girl-red-eyes-boobs.png',
+  'mixed-race-goddess-boobs.png',
+  'mixed-race-woman-boobs.png',
+  'mixed-race-woman-naturals.png',
+  'natural-mixed-race-girl.png',
+  'natural-mixed-race-woman-nude-pose.png',
+  'nice-ebony-boobs.png',
+  'nice-latina-girl-tits.png',
+  'nice-latina-tits.png',
+  'nice-white-girl-boobs.png',
+  'no-nipple-asian-girl-boobs.png',
+  'outstanding-beauty-latina-model-boobs.png',
+  'perfect-asian-boobs.png',
+  'perfect-asian-tits.png',
+  'perky-asian-girl-boobs.png',
+  'perky-ebony-boobs.png',
+  'perky-ebony-tits.png',
+  'pretty-asian-boobs.png',
+  'pretty-asian-tits.png',
+  'pretty-mixed-race-girl.png',
+  'puffy-boobs-asian.png',
+  'red-head-white-girl-boobs.png',
+  'saggy-tit-asian.png',
+  'seductive-latina-girl.png',
+  'seductive-white-girl-boobs.png',
+  'sexy-asian-tits.png',
+  'sexy-ebony.png',
+  'sexy-latina-boobs.png',
+  'sexy-latina-boobs-watered-up.png',
+  'sexy-latina-girl.png',
+  'slim-asian-girl-boobs.png',
+  'slim-attractive-asian-girl-boobs.png',
+  'slim-ebony-boobs.png',
+  'stunning-asian-girl-boobs.png',
+  'stunning-beauty-mixed-race-girl.png',
+  'stunning-beauty-mixed-race-girl-nude.png',
+  'stunning-beauty-white-girl-boobs.png',
+  'stunning-mixed-race-girl-nude-pose.png',
+  'stunning-mixed-race-woman-nude-pose.png',
+  'very-attractive-mixed-race-girl-boobs.png',
+  'very-cute-mixed-race-girl.png',
+  'very-pretty-white-girl-nude.png',
+  'white-blonde-girl-boobs.png',
+  'white-girl-pose.png'
 ];
 
-/**
- * NOTES:
- * - Make sure all image paths start with '/' and are relative to the 'public' folder
- * - For videos, use the same structure but with video file extensions (.mp4, .webm, etc.)
- * - You can add more properties like 'description', 'uploadDate', etc. if needed
- * - Each item MUST have a unique 'id'
- * - The gallery will automatically display all items and handle filtering
- */
+const CATEGORY_PATTERNS = [
+  { category: 'Mixed', pattern: /mixed-race/ },
+  { category: 'Latina', pattern: /latina/ },
+  { category: 'Asian', pattern: /asian/ },
+  { category: 'White', pattern: /white|caucasian|blonde|red-head/ },
+  { category: 'Black', pattern: /ebony|black|light-skinned|lightskinned/ }
+];
+
+const CATEGORY_VIEW_BOOST = {
+  Asian: 1900,
+  Black: 1500,
+  Latina: 1700,
+  White: 1300,
+  Mixed: 2100,
+  All: 1000
+};
+
+function inferCategory(fileName) {
+  const normalized = fileName.toLowerCase();
+  const matched = CATEGORY_PATTERNS.find(({ pattern }) => pattern.test(normalized));
+  return matched ? matched.category : 'All';
+}
+
+function buildTitleFromFileName(fileName) {
+  const baseName = fileName.replace(/\.[^/.]+$/, '');
+  return baseName
+    .split('-')
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+function buildRating(index) {
+  const value = 4.4 + (((index + 1) * 3) % 7) / 10;
+  return Number(Math.min(5, value).toFixed(1));
+}
+
+function buildViews(index, category) {
+  const base = 1700 + index * 185;
+  const cyclicalLift = (index % 5) * 240;
+  const categoryLift = CATEGORY_VIEW_BOOST[category] || CATEGORY_VIEW_BOOST.All;
+  return base + cyclicalLift + categoryLift;
+}
+
+function buildTags(index, views) {
+  const tags = [];
+  if ((index + 1) % 5 === 0) {
+    tags.push('featured');
+  }
+  if (views >= 12000 || (index + 1) % 4 === 0) {
+    tags.push('popular');
+  }
+  return tags;
+}
+
+export const images = IMAGE_FILES.map((fileName, index) => {
+  const category = inferCategory(fileName);
+  const views = buildViews(index, category);
+
+  return {
+    id: index + 1,
+    image: `/images/${fileName}`,
+    title: buildTitleFromFileName(fileName),
+    rating: buildRating(index),
+    views,
+    category,
+    tags: buildTags(index, views)
+  };
+});
