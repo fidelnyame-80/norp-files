@@ -2,7 +2,7 @@
 import { useSearchParams } from 'react-router-dom';
 import { images } from '../images';
 import { filterBySearch } from '../galleryModel';
-import GalleryGrid from '../components/GalleryGrid';
+import GalleryGrid from '../Components/GalleryGrid';
 
 function Search() {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -2,7 +2,7 @@
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { images } from '../images';
 import { CATEGORIES, filterByCategory, getCategoryPath, normalizeCategory } from '../galleryModel';
-import GalleryGrid from '../components/GalleryGrid';
+import GalleryGrid from '../Components/GalleryGrid';
 
 function Categories() {
   const { category } = useParams();

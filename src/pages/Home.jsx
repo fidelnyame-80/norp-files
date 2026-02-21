@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import { images } from '../images';
 import { CATEGORIES, filterBySearch, getCategoryPath } from '../galleryModel';
-import GalleryGrid from '../components/GalleryGrid';
+import GalleryGrid from '../Components/GalleryGrid';
 
 function Home() {
   const navigate = useNavigate();
@@ -51,6 +51,10 @@ function Home() {
           </button>
         ))}
       </div>
+
+      <p className="home-disclosure">
+        All images shown are AI generated. No real people are involved.
+      </p>
 
       <GalleryGrid
         items={filteredImages}

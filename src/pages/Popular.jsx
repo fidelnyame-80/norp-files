@@ -1,7 +1,7 @@
 ﻿import React, { useMemo } from 'react';
 import { images } from '../images';
 import { filterPopular } from '../galleryModel';
-import GalleryGrid from '../components/GalleryGrid';
+import GalleryGrid from '../Components/GalleryGrid';
 
 function Popular() {
   const popularImages = useMemo(() => filterPopular(images), []);
