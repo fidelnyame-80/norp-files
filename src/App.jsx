@@ -101,7 +101,7 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="brand-block">
-        <img className="brand-logo" src="/images/beaufiniti.png" alt="beaufiniti logo" />
+        <img className="brand-logo" src="/images/beaufiniti.webp" alt="beaufiniti logo" />
         <h2 className="sidebar-title">beaufiniti</h2>
       </div>
 
