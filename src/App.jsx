@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
@@ -7,7 +7,31 @@ import Popular from './pages/Popular';
 import Search from './pages/Search';
 import { CATEGORIES, getCategoryPath } from './galleryModel';
 
+const AGE_VERIFICATION_KEY = 'beaufiniti_age_verified';
+
 function App() {
+  const [isAgeVerified, setIsAgeVerified] = useState(() => {
+    if (typeof window === 'undefined') {
+      return false;
+    }
+
+    return window.localStorage.getItem(AGE_VERIFICATION_KEY) === 'true';
+  });
+
+  useEffect(() => {
+    document.body.classList.toggle('age-gate-open', !isAgeVerified);
+    return () => document.body.classList.remove('age-gate-open');
+  }, [isAgeVerified]);
+
+  const handleAgeConfirm = () => {
+    window.localStorage.setItem(AGE_VERIFICATION_KEY, 'true');
+    setIsAgeVerified(true);
+  };
+
+  const handleAgeDecline = () => {
+    window.location.href = 'https://www.google.com';
+  };
+
   return (
     <Router>
       <div className="app">
@@ -27,7 +51,40 @@ function App() {
           </footer>
         </main>
       </div>
+
+      {!isAgeVerified && (
+        <AgeVerificationGate onConfirm={handleAgeConfirm} onDecline={handleAgeDecline} />
+      )}
     </Router>
+  );
+}
+
+function AgeVerificationGate({ onConfirm, onDecline }) {
+  return (
+    <div className="age-gate-backdrop">
+      <section
+        className="age-gate-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="age-gate-title"
+        aria-describedby="age-gate-description"
+      >
+        <p className="age-gate-kicker">Adults Only</p>
+        <h2 id="age-gate-title" className="age-gate-title">Age Verification</h2>
+        <p id="age-gate-description" className="age-gate-description">
+          This website contains adult-oriented, AI-generated content and is restricted to users 18 years or older.
+        </p>
+        <div className="age-gate-actions">
+          <button type="button" className="age-gate-enter" onClick={onConfirm}>
+            I am 18+ Enter
+          </button>
+          <button type="button" className="age-gate-exit" onClick={onDecline}>
+            Exit
+          </button>
+        </div>
+        <p className="age-gate-footnote">By entering, you confirm that you are at least 18 years old.</p>
+      </section>
+    </div>
   );
 }
 
@@ -44,8 +101,8 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="brand-block">
-        <img className="brand-logo" src="/images/synthgallery-logo.png" alt="SynthGallery logo" />
-        <h2 className="sidebar-title">SynthGallery</h2>
+        <img className="brand-logo" src="/images/beaufiniti.png" alt="beaufiniti logo" />
+        <h2 className="sidebar-title">beaufiniti</h2>
       </div>
 
       <nav className="nav-section">

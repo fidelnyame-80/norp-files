@@ -1,14 +1,7 @@
-﻿import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const DEFAULT_ITEMS_PER_PAGE = 9;
-
-function GalleryGrid({ items, emptyMessage, itemsPerPage = DEFAULT_ITEMS_PER_PAGE }) {
-  const [page, setPage] = useState(1);
+function GalleryGrid({ items, emptyMessage }) {
   const [selectedItemId, setSelectedItemId] = useState(null);
-
-  useEffect(() => {
-    setPage(1);
-  }, [items]);
 
   useEffect(() => {
     if (!selectedItemId) {
@@ -25,11 +18,6 @@ function GalleryGrid({ items, emptyMessage, itemsPerPage = DEFAULT_ITEMS_PER_PAG
     return () => window.removeEventListener('keydown', handleEscape);
   }, [selectedItemId]);
 
-  const visibleItems = useMemo(() => {
-    return items.slice(0, page * itemsPerPage);
-  }, [items, page, itemsPerPage]);
-
-  const canLoadMore = visibleItems.length < items.length;
   const selectedItem = items.find((item) => item.id === selectedItemId) || null;
   const sideItems = selectedItem ? items.filter((item) => item.id !== selectedItem.id) : [];
 
@@ -56,7 +44,7 @@ function GalleryGrid({ items, emptyMessage, itemsPerPage = DEFAULT_ITEMS_PER_PAG
   return (
     <>
       <div className="gallery-grid">
-        {visibleItems.map((item) => (
+        {items.map((item) => (
           <button
             type="button"
             className="gallery-item"
@@ -68,7 +56,6 @@ function GalleryGrid({ items, emptyMessage, itemsPerPage = DEFAULT_ITEMS_PER_PAG
                 src={item.image}
                 alt={item.title}
                 className="gallery-image"
-                loading="lazy"
                 decoding="async"
               />
             </div>
@@ -91,20 +78,9 @@ function GalleryGrid({ items, emptyMessage, itemsPerPage = DEFAULT_ITEMS_PER_PAG
         ))}
       </div>
 
-      {visibleItems.length === 0 && (
+      {items.length === 0 && (
         <div className="no-results">
           <p>{emptyMessage}</p>
-        </div>
-      )}
-
-      {canLoadMore && (
-        <div className="pagination-row">
-          <button className="load-more-btn" onClick={() => setPage((currentPage) => currentPage + 1)}>
-            Load More
-          </button>
-          <p className="pagination-meta">
-            Showing {visibleItems.length} of {items.length}
-          </p>
         </div>
       )}
 
@@ -131,7 +107,7 @@ function GalleryGrid({ items, emptyMessage, itemsPerPage = DEFAULT_ITEMS_PER_PAG
                   className="viewer-thumb"
                   onClick={() => setSelectedItemId(item.id)}
                 >
-                  <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
+                  <img src={item.image} alt={item.title} decoding="async" />
                   <span>{item.title}</span>
                 </button>
               ))}
