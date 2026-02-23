@@ -16,6 +16,8 @@ function Popular() {
         <span className="page-meta">{popularImages.length} results</span>
       </header>
 
+      
+
       <GalleryGrid
         items={popularImages}
         emptyMessage="No popular items found."
