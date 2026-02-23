@@ -676,6 +676,28 @@ body.age-gate-open {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.kadam-ad-wrap {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  min-height: 88px;
+}
+
+.kadam-ad-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #9bb1cf;
+}
+
+.kadam-ad-wrap .zwrguf419549 {
+  min-height: 68px;
+}
+
 .content-policy p {
   margin: 0 0 6px;
 }

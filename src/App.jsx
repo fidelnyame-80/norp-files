@@ -9,6 +9,7 @@ import Page2257 from './pages/Page2257';
 import { CATEGORIES, getCategoryPath } from './galleryModel';
 
 const AGE_VERIFICATION_KEY = 'beaufiniti_age_verified';
+const KADAM_ZONE_ID = 'zwrguf419549';
 
 function App() {
   const [isAgeVerified, setIsAgeVerified] = useState(() => {
@@ -38,6 +39,8 @@ function App() {
       <div className="app">
         <Sidebar />
         <main className="main-content">
+          <KadamAdUnit />
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/categories" element={<Categories />} />
@@ -89,6 +92,15 @@ function AgeVerificationGate({ onConfirm, onDecline }) {
         <p className="age-gate-footnote">By entering, you confirm that you are at least 18 years old.</p>
       </section>
     </div>
+  );
+}
+
+function KadamAdUnit() {
+  return (
+    <section className="kadam-ad-wrap" aria-label="Sponsored">
+      <p className="kadam-ad-label">Sponsored</p>
+      <div className={KADAM_ZONE_ID}></div>
+    </section>
   );
 }
 
