@@ -676,6 +676,61 @@ body.age-gate-open {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.content-policy p {
+  margin: 0 0 6px;
+}
+
+.policy-link {
+  color: #ffb89f;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.policy-link:hover {
+  color: #ffd5c5;
+}
+
+.sidebar-2257-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.legal-shell {
+  width: min(900px, 100%);
+}
+
+.legal-card {
+  padding: 18px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(20, 28, 44, 0.85), rgba(13, 20, 33, 0.85));
+}
+
+.legal-card h2 {
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #f7f9ff;
+}
+
+.legal-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c4d1e6;
+}
+
+.legal-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: #adc0de;
+}
+
+.legal-list li + li {
+  margin-top: 4px;
+}
+
 @media (max-width: 1024px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));

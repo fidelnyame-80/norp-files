@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Categories from './pages/Categories';
 import Popular from './pages/Popular';
 import Search from './pages/Search';
+import Page2257 from './pages/Page2257';
 import { CATEGORIES, getCategoryPath } from './galleryModel';
 
 const AGE_VERIFICATION_KEY = 'beaufiniti_age_verified';
@@ -43,11 +44,14 @@ function App() {
             <Route path="/categories/:category" element={<Categories />} />
             <Route path="/popular" element={<Popular />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/2257" element={<Page2257 />} />
           </Routes>
 
           <footer className="content-policy">
-            Content policy: all gallery assets are AI generated, all subjects are fictional, and no real people are
-            depicted.
+            <p>
+              Content policy: all gallery assets are AI generated, all subjects are fictional, and no real people are
+              depicted.
+            </p>
           </footer>
         </main>
       </div>
@@ -139,6 +143,9 @@ function Sidebar() {
       <div className="sidebar-policy">
         <h4 className="sidebar-policy-title">AI Disclosure</h4>
         <p className="sidebar-note">All images shown are AI generated. No real people are involved.</p>
+        <Link className="policy-link sidebar-2257-link" to="/2257">
+          18 U.S.C. 2257 Statement
+        </Link>
       </div>
     </aside>
   );
