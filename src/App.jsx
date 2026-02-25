@@ -7,7 +7,6 @@ import Popular from './pages/Popular';
 import Search from './pages/Search';
 import Page2257 from './pages/Page2257';
 import { CATEGORIES, getCategoryPath } from './galleryModel';
-import KadamAd from './Components/AdComponent';
 
 const AGE_VERIFICATION_KEY = 'beaufiniti_age_verified';
 
@@ -39,7 +38,6 @@ function App() {
       <div className="app">
         <Sidebar />
         <main className="main-content">
-          <KadamAd/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/categories" element={<Categories />} />

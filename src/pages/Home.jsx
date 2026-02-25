@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { images } from '../images';
 import { CATEGORIES, filterBySearch, getCategoryPath } from '../galleryModel';
 import GalleryGrid from '../Components/GalleryGrid';
-import AdComponent from '../Components/AdComponent';
-import KadamAd from '../Components/AdComponent';
 
 function Home() {
   const navigate = useNavigate();
@@ -29,10 +27,6 @@ function Home() {
         </div>
         <span className="page-meta">{filteredImages.length} results</span>
       </header>
-
-      <div>
-      <KadamAd/>
-      </div>
       <form className="search-form" onSubmit={handleSearchSubmit}>
         <input
           className="search-input"
@@ -68,7 +62,6 @@ function Home() {
         items={filteredImages}
         emptyMessage="No items found for the selected filters."
       />
-      <AdComponent />
     </>
   );
 }
