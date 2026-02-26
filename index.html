@@ -5,63 +5,20 @@
     <link rel="icon" type="image/png" href="/images/beaufiniti.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>beaufiniti</title>
+
+    <!-- PopAds (standard) - in HEAD as recommended -->
+    <script
+      type="text/javascript"
+      data-cfasync="false"
+      src="https://www.popads.net/api/website_code?key=02cab525dbb49c136d5bb69ef2ce3c3b153b974e&website_id=5279573&tl=auto&of=1"
+      async
+    ></script>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <!-- Your React/Vite entry -->
+    <!-- React/Vite entry -->
     <script type="module" src="/src/main.jsx"></script>
-
-    <!-- Popunder script: load last -->
-    <script type="text/javascript" data-cfasync="false">
-      (function () {
-        var t = window,
-          d = "b0836393a6c991011bf4bf66c0a65244",
-          n = [
-            ["siteId", 653 * 674 - 287 + 377 + 4839361],
-            ["minBid", 0],
-            ["popundersPerIP", "0"],
-            ["delayBetween", 0],
-            ["default", false],
-            ["defaultPerDay", 0],
-            ["topmostLayer", "auto"]
-          ],
-          l = [
-            "d3d3LmNkbjRhZHMuY29tL2ZhcGhyb2RpdGUubWluLmNzcw==",
-            "ZDNnNW92Zm5nanc5YncuY2xvdWRmcm9udC5uZXQvTXl2L3FyZXRpbmEubWluLmpz",
-            "d3d3Lmd1a2dwbWpobG9uc2wuY29tL3lhcGhyb2RpdGUubWluLmNzcw==",
-            "d3d3LnJiYmxiemR2eGJlcy5jb20vS0xLUGQvdXJldGluYS5taW4uanM="
-          ],
-          z = -1,
-          o,
-          y,
-          b = function () {
-            clearTimeout(y);
-            z++;
-            if (l[z] && !(1797961442000 < new Date().getTime() && 1 < z)) {
-              o = t.document.createElement("script");
-              o.type = "text/javascript";
-              o.async = !0;
-              var a = t.document.getElementsByTagName("script")[0];
-              o.src = "https://" + atob(l[z]);
-              o.crossOrigin = "anonymous";
-              o.onerror = b;
-              o.onload = function () {
-                clearTimeout(y);
-                t[d.slice(0, 16) + d.slice(0, 16)] || b();
-              };
-              y = setTimeout(b, 5e3);
-              a.parentNode.insertBefore(o, a);
-            }
-          };
-        if (!t[d]) {
-          try {
-            Object.freeze((t[d] = n));
-          } catch (e) {}
-          b();
-        }
-      })();
-    </script>
   </body>
 </html>
